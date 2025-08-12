@@ -2,284 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrub Fund Technical White Paper - Solana-Based Decentralized Fund Management Protocol</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2d3748;
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            border-bottom: 3px solid #007acc;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2d3748;
-            font-size: 1.8em;
-            margin-top: 2em;
-            margin-bottom: 1em;
-            border-left: 4px solid #007acc;
-            padding-left: 15px;
-        }
-        h3 {
-            color: #4a5568;
-            font-size: 1.3em;
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-        }
-        h4 {
-            color: #4a5568;
-            font-size: 1.1em;
-            margin-top: 1.2em;
-            margin-bottom: 0.6em;
-        }
-        .meta-info {
-            background: #e8f4f8;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        .cross-reference {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .cross-reference a {
-            color: #856404;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .cross-reference a:hover {
-            text-decoration: underline;
-        }
-        .code-block {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 5px;
-            padding: 15px;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            font-size: 0.9em;
-            overflow-x: auto;
-            margin: 15px 0;
-        }
-        .architecture-diagram {
-            background: #f0f8ff;
-            border: 2px solid #007acc;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-family: monospace;
-            white-space: pre;
-            overflow-x: auto;
-        }
-        .highlight-box {
-            background: #f0f8ff;
-            border-left: 4px solid #007acc;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .feature-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #007acc;
-        }
-        .feature-item h4 {
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .toc {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .toc h3 {
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .toc ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin: 8px 0;
-        }
-        .toc a {
-            color: #4a5568;
-        }
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-        li {
-            margin: 0.5em 0;
-        }
-        hr {
-            border: none;
-            height: 2px;
-            background: linear-gradient(to right, #007acc, transparent);
-            margin: 40px 0;
-        }
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .pda-list {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .struct-definition {
-            background: #f1f3f4;
-            border-left: 4px solid #34a853;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .warning-box {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-    </style>
+    <title>Shrub Fund Technical White Paper</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Shrub Fund Technical White Paper</h1>
-        <h2 style="border-left: none; padding-left: 0; margin-top: 0;">Solana-Based Decentralized Fund Management Protocol</h2>
-        
-        <div class="meta-info">
-            <strong>Version 1.0</strong><br>
-            <strong>Date:</strong> January 2025<br>
-            <strong>Technical Architecture & Implementation Details</strong>
-        </div>
+    <h1>Shrub Fund Technical White Paper</h1>
+    <h2>Solana-Based Decentralized Fund Management Protocol</h2>
+    <p><strong>Version 1.0</strong><br>Date: January 2025</p>
+    <p><strong>Technical Architecture & Implementation Details</strong></p>
+    <p>🔧 Also Available: <a href="business-whitepaper.html">Business White Paper</a> - High-level strategy and market overview</p>
 
-        <div class="cross-reference">
-            🔧 <strong>Also Available:</strong> <a href="./business-whitepaper.html">Business White Paper</a> - High-level strategy and market overview
-        </div>
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#section1">1. System Architecture</a></li>
+        <li><a href="#section2">2. Smart Contract Design</a></li>
+        <li><a href="#section3">3. NAV Calculation System</a></li>
+        <li><a href="#section4">4. User Registry Architecture</a></li>
+        <li><a href="#section5">5. Portfolio Valuation Engine</a></li>
+        <li><a href="#section6">6. Security Model</a></li>
+        <li><a href="#section7">7. Performance & Scalability</a></li>
+        <li><a href="#section8">8. API & Integration Layer</a></li>
+        <li><a href="#section9">9. Deployment & Infrastructure</a></li>
+        <li><a href="#section10">10. Code Repository</a></li>
+        <li><a href="#section11">11. Future Enhancements</a></li>
+    </ul>
 
-        <hr>
-
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#system-architecture">1. System Architecture</a></li>
-                <li><a href="#smart-contract-design">2. Smart Contract Design</a></li>
-                <li><a href="#nav-calculation">3. NAV Calculation System</a></li>
-                <li><a href="#user-registry">4. User Registry Architecture</a></li>
-                <li><a href="#portfolio-valuation">5. Portfolio Valuation Engine</a></li>
-                <li><a href="#security-model">6. Security Model</a></li>
-                <li><a href="#performance">7. Performance & Scalability</a></li>
-                <li><a href="#api-integration">8. API & Integration Layer</a></li>
-                <li><a href="#deployment">9. Deployment & Infrastructure</a></li>
-                <li><a href="#code-repository">10. Code Repository</a></li>
-                <li><a href="#future-enhancements">11. Future Enhancements</a></li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <h2 id="system-architecture">1. System Architecture</h2>
-
-        <h3>1.1 High-Level Architecture</h3>
-
-        <div class="architecture-diagram">┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend UI   │    │  Lambda NAV     │    │  Solana Program │
-│   (React/TS)    │◄──►│   Updater       │◄──►│   (Rust/Anchor) │
+    <h2 id="section1">1. System Architecture</h2>
+    <h3>1.1 High-Level Architecture</h3>
+    <pre>
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend UI   │◄──►│  Lambda NAV     │◄──►│  Solana Program │
+│   (React/TS)    │    │   Updater       │    │   (Rust/Anchor) │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          ▼                       ▼                       ▼
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │  Helius RPC     │    │  Jupiter APIs   │    │  Solana Network│
 │  Infrastructure │    │  (Prices/Perps) │    │   (Mainnet)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘</div>
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+    </pre>
+    <h3>1.2 Component Overview</h3>
+    <h4>On-Chain Components:</h4>
+    <ul>
+        <li>Solana Program (Rust/Anchor framework)</li>
+        <li>Program Derived Addresses (PDAs) for state storage</li>
+        <li>SPL Token integration for USDC handling</li>
+    </ul>
+    <h4>Off-Chain Components:</h4>
+    <ul>
+        <li>Lambda function for NAV updates (Node.js 20.x)</li>
+        <li>React/TypeScript frontend</li>
+        <li>IPFS hosting for decentralized web access</li>
+    </ul>
+    <h4>External Integrations:</h4>
+    <ul>
+        <li>Jupiter for price feeds and perpetuals</li>
+        <li>Helius for RPC infrastructure</li>
+        <li>Step Finance for portfolio visualization</li>
+    </ul>
+    <p><em>Note: Automation features (e.g., arb trading, cashout processes) are in development and not yet deployed.</em></p>
 
-        <h3>1.2 Component Overview</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>On-Chain Components:</h4>
-                <ul>
-                    <li>Solana Program (Rust/Anchor framework)</li>
-                    <li>Program Derived Addresses (PDAs) for state storage</li>
-                    <li>SPL Token integration for USDC handling</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Off-Chain Components:</h4>
-                <ul>
-                    <li>Lambda function for NAV updates</li>
-                    <li>React/TypeScript frontend</li>
-                    <li>IPFS hosting for decentralized web access</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>External Integrations:</h4>
-                <ul>
-                    <li>Jupiter for price feeds and perpetuals</li>
-                    <li>Helius for RPC infrastructure</li>
-                    <li>Step Finance for portfolio visualization</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 id="smart-contract-design">2. Smart Contract Design</h2>
-
-        <h3>2.1 Program Architecture</h3>
-
-        <div class="highlight-box">
-            <strong>Program ID:</strong> <code>GYe1hhxHhojNy5LfTddD79BdHCnsYC2dsD8KMrKn1se6</code>
-        </div>
-
-        <p>The Shrub Fund protocol is implemented as a single Solana program with multiple instruction handlers:</p>
-
-        <div class="code-block">// Core Program Instructions
+    <h2 id="section2">2. Smart Contract Design</h2>
+    <h3>2.1 Program Architecture</h3>
+    <p><strong>Program ID:</strong> GYe1hhxHhojNy5LfTddD79BdHCnsYC2dsD8KMrKn1se6</p>
+    <p>The Shrub Fund protocol is implemented as a single Solana program with multiple instruction handlers:</p>
+    <pre>
 pub enum ShrubFundInstruction {
     StakeUsdc {
         amount: u64,
@@ -289,141 +75,116 @@ pub enum ShrubFundInstruction {
     UpdateOptimizedNav {
         portfolio_value: u64,
     },
-}</div>
-
-        <h3>2.2 Program Derived Addresses (PDAs)</h3>
-
-        <p>The protocol uses a v2 PDA architecture for improved scalability:</p>
-
-        <div class="pda-list">
-            <div class="code-block">// Core Protocol PDAs
+}
+    </pre>
+    <h3>2.2 Program Derived Addresses (PDAs)</h3>
+    <p>The protocol uses a v2 PDA architecture for improved scalability:</p>
+    <pre>
 const FUND_POOL_SEED: &[u8] = b"optimized_fund_pool_v2";
 const NAV_HISTORY_SEED: &[u8] = b"nav_history_v2";
 const PENDING_CASHOUT_SEED: &[u8] = b"pending_cashout_pool_v2";
 const REGISTRY_DIRECTORY_SEED: &[u8] = b"registry_directory_v2";
 
-// User-Specific PDAs
 const USER_SHARE_SEED: &[u8] = b"user_share_v2";
 const USER_REGISTRY_SEED: &[u8] = b"user_registry_v2";
-const PENDING_UNSTAKE_SEED: &[u8] = b"pending_unstake";</div>
-        </div>
-
-        <h4>Key PDAs:</h4>
-        <ul>
-            <li><strong>FUND_POOL_PDA:</strong> Core fund state and NAV data</li>
-            <li><strong>NAV_HISTORY_PDA:</strong> Historical NAV records for averaging</li>
-            <li><strong>PENDING_CASHOUT_POOL_PDA:</strong> Liquidity pool for user withdrawals</li>
-            <li><strong>REGISTRY_DIRECTORY_PDA:</strong> Registry management and user counting</li>
-        </ul>
-
-        <h3>2.3 Data Structures</h3>
-
-        <h4>FundPool Structure</h4>
-        <div class="struct-definition">
-            <div class="code-block">#[account]
+    </pre>
+    <p><strong>Key PDAs:</strong></p>
+    <ul>
+        <li>FUND_POOL_PDA: 4BvHvVFHSsfci77xGn7rUfLcP57XXMJVu5RwCn6oJfZT</li>
+        <li>NAV_HISTORY_PDA: BWGpb6VJRdwroyoQSdwsZiDPAdWmaGjzffJSWiug4Tkd</li>
+        <li>PENDING_CASHOUT_POOL_PDA: C98eejeKfbcfTbTe38VxrQQFkqp4SnorH98Mqn79jEnV</li>
+        <li>REGISTRY_DIRECTORY_PDA: DU8EjkHLiNmU7py9ov4FiFXCjSUM8d6oEnRAC1z5GWve</li>
+    </ul>
+    <h3>2.3 Data Structures</h3>
+    <h4>FundPool Structure</h4>
+    <pre>
+#[account]
 pub struct FundPool {
-    pub total_shares: u64,           // Total shares outstanding
-    pub optimized_nav: u64,          // 7-day smoothed NAV (USDC units)
-    pub real_nav: u64,               // Real-time NAV (USDC units)
-    pub total_users: u64,            // Total number of users
-    pub pending_cashout: u64,        // USDC needed for pending withdrawals
-    pub authority: Pubkey,           // Fund authority (gardener)
-    pub bump: u8,                    // PDA bump seed
-}</div>
-        </div>
-
-        <h4>UserShare Structure</h4>
-        <div class="struct-definition">
-            <div class="code-block">#[account]
+    pub total_shares: u64,
+    pub optimized_nav: u64,
+    pub real_nav: u64,
+    pub total_users: u64,
+    pub pending_cashout: u64,
+    pub authority: Pubkey,
+    pub bump: u8,
+}
+    </pre>
+    <h4>UserShare Structure</h4>
+    <pre>
+#[account]
 pub struct UserShare {
-    pub user: Pubkey,                // User's public key
-    pub shares: u64,                 // User's share balance
-    pub stake_timestamp: i64,        // When user first staked
-    pub registry_id: u64,            // Which registry user belongs to
-    pub registry_index: u64,         // Index within registry
-}</div>
-        </div>
-
-        <h4>NavHistory Structure</h4>
-        <div class="struct-definition">
-            <div class="code-block">#[account]
+    pub user: Pubkey,
+    pub shares: u64,
+    pub stake_timestamp: i64,
+    pub registry_id: u64,
+    pub registry_index: u64,
+    pub unstake_initiated: bool,
+}
+    </pre>
+    <h4>NavHistory Structure</h4>
+    <pre>
+#[account]
 pub struct NavHistory {
-    pub entries: Vec&lt;NavEntry&gt;,      // Historical NAV records
-    pub current_index: usize,        // Current position in circular buffer
+    pub entries: Vec<NavEntry>,
+    pub current_index: usize,
 }
 
 #[derive(AnchorSerialize, AnchorDeserialize, Clone)]
 pub struct NavEntry {
-    pub timestamp: i64,              // When NAV was recorded
-    pub nav_value: u64,              // NAV value (USDC units)
-}</div>
-        </div>
+    pub timestamp: i64,
+    pub nav_value: u64,
+}
+    </pre>
 
-        <hr>
+    <h2 id="section3">3. NAV Calculation System</h2>
+    <h3>3.1 Dual NAV Architecture</h3>
+    <p>Shrub Fund implements a one-directional averaged NAV system:</p>
+    <ul>
+        <li><strong>Real NAV (Real-time):</strong>
+            <ul>
+                <li>Updated every 2 hours via Lambda function</li>
+                <li>Reflects current market value of all positions</li>
+                <li>Used for staking (premium pricing) and internal calculations</li>
+                <li>Includes tokens, SOL (minus 1 SOL reserve), and Jupiter Perpetuals</li>
+            </ul>
+        </li>
+        <li><strong>Optimized NAV (Smoothed):</strong>
+            <ul>
+                <li>One-directional averaging: increases smoothed over 7 days (84 entries), decreases applied instantly</li>
+                <li>Protects against gaming and bank runs</li>
+                <li>Used for unstaking (discount pricing) and UI display</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>3.2 Portfolio Valuation Components</h3>
+    <p>The NAV calculation includes:</p>
+    <h4>Spot Holdings:</h4>
+    <pre>
+const spotValue = tokenBalance * currentPrice;
+    </pre>
+    <h4>Jupiter Perpetuals:</h4>
+    <pre>
+const perpValue = collateralUsd + realizedPnl + unrealizedPnl - totalFees;
+    </pre>
+    <h4>Fee Calculations:</h4>
+    <pre>
+const totalFees = openingFee + closingFee + borrowingFee;
+const borrowingFee = positionSizeUsd * 0.00012 * hoursOpen;
+    </pre>
+    <h3>3.3 NAV Update Process</h3>
+    <pre>
+NAV Update Flow:
+    Lambda Trigger → Fetch Trading Wallet Balances
+    Get Token Prices from Jupiter → Calculate Spot Holdings Value
+    Fetch Jupiter Perps Positions → Calculate Perps P&L and Fees
+    Sum Total Portfolio Value → Call update_optimized_nav Instruction
+    Update Real NAV On-Chain → Apply One-Directional Logic → Update Optimized NAV
+    </pre>
 
-        <h2 id="nav-calculation">3. NAV Calculation System</h2>
-
-        <h3>3.1 Dual NAV Architecture</h3>
-
-        <p>Shrub Fund implements a sophisticated dual NAV system:</p>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Real NAV (Real-time)</h4>
-                <ul>
-                    <li>Updated every 2 hours via Lambda function</li>
-                    <li>Reflects current market value of all positions</li>
-                    <li>Used for stake/unstake calculations</li>
-                    <li>Includes complex derivatives and P&L</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Optimized NAV (Smoothed)</h4>
-                <ul>
-                    <li>7-day rolling average of Real NAV</li>
-                    <li>Provides stability for UI display</li>
-                    <li>Reduces manipulation potential</li>
-                    <li>Used for user interface consistency</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>3.2 Portfolio Valuation Components</h3>
-
-        <p>The NAV calculation includes:</p>
-
-        <h4>Spot Holdings:</h4>
-        <div class="code-block">const spotValue = tokenBalance * currentPrice;</div>
-
-        <h4>Jupiter Perpetuals:</h4>
-        <div class="code-block">const perpValue = collateralUsd + realizedPnl + unrealizedPnl - totalFees;</div>
-
-        <h4>Fee Calculations:</h4>
-        <div class="code-block">const totalFees = openingFee + closingFee + borrowingFee;
-const borrowingFee = positionSizeUsd * 0.00012 * hoursOpen;</div>
-
-        <h3>3.3 NAV Update Process</h3>
-
-        <div class="highlight-box">
-            <p><strong>NAV Update Flow:</strong></p>
-            <ol>
-                <li>Lambda Trigger → Fetch Trading Wallet Balances</li>
-                <li>Get Token Prices from Jupiter → Calculate Spot Holdings Value</li>
-                <li>Fetch Jupiter Perps Positions → Calculate Perps P&L and Fees</li>
-                <li>Sum Total Portfolio Value → Call update_optimized_nav Instruction</li>
-                <li>Update Real NAV On-Chain → Calculate 7-Day Average → Update Optimized NAV</li>
-            </ol>
-        </div>
-
-        <hr>
-
-        <h2 id="user-registry">4. User Registry Architecture</h2>
-
-        <h3>4.1 Scalable User Management</h3>
-
-        <p>The protocol supports unlimited users through a hierarchical registry system:</p>
-
-        <div class="code-block">// Registry capacity
+    <h2 id="section4">4. User Registry Architecture</h2>
+    <h3>4.1 Scalable User Management</h3>
+    <p>The protocol supports unlimited users through a hierarchical registry system, with users paying for registry expansion:</p>
+    <pre>
 const MAX_USERS_PER_REGISTRY: usize = 100_000;
 
 #[account]
@@ -435,33 +196,27 @@ pub struct RegistryDirectory {
 
 #[account]
 pub struct UserRegistry {
+    pub registry_id: u64,
     pub user_count: u64,
-    pub users: Vec&lt;UserRegistryEntry&gt;,
-}</div>
-
-        <h3>4.2 Registry Assignment Logic</h3>
-
-        <div class="code-block">fn find_available_registry() -> Result&lt;u64&gt; {
+    pub users: Vec<UserRegistryEntry>,
+}
+    </pre>
+    <h3>4.2 Registry Assignment Logic</h3>
+    <pre>
+fn find_available_registry() -> Result<u64> {
     let registry_dir = &mut ctx.accounts.registry_directory;
-    
-    // Check existing registries for space
     for registry_id in 0..registry_dir.total_registries {
         let registry = load_registry(registry_id)?;
         if registry.user_count < MAX_USERS_PER_REGISTRY {
             return Ok(registry_id);
         }
     }
-    
-    // Create new registry if all are full
     Ok(registry_dir.total_registries)
-}</div>
-
-        <h3>4.3 Registry Preloading</h3>
-
-        <p>The frontend implements registry preloading for new users:</p>
-
-        <div class="code-block">const prefindAvailableRegistrySlot = async () => {
-    // Check existing registries
+}
+    </pre>
+    <h3>4.3 Registry Preloading</h3>
+    <pre>
+const prefindAvailableRegistrySlot = async () => {
     for (let registryId = 0; registryId < totalRegistries; registryId++) {
         const userCount = await getRegistryUserCount(registryId);
         if (userCount < 100_000) {
@@ -469,45 +224,30 @@ pub struct UserRegistry {
             return;
         }
     }
-    
-    // All full - need new registry
     setCachedRegistrySlot({ 
         registryId: totalRegistries, 
         needsCreation: true 
     });
-};</div>
+};
+    </pre>
 
-        <hr>
-
-        <h2 id="portfolio-valuation">5. Portfolio Valuation Engine</h2>
-
-        <h3>5.1 Multi-Asset Support</h3>
-
-        <p>The valuation engine supports diverse asset types:</p>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Supported Assets:</h4>
-                <ul>
-                    <li>SPL Tokens (legacy and Token-2022)</li>
-                    <li>Solana native tokens</li>
-                    <li>Jupiter Perpetuals positions</li>
-                    <li>Cross-collateral derivatives</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>5.2 Jupiter Perpetuals Integration</h3>
-
-        <div class="code-block">// Perpetuals position calculation
+    <h2 id="section5">5. Portfolio Valuation Engine</h2>
+    <h3>5.1 Multi-Asset Support</h3>
+    <p>The valuation engine supports:</p>
+    <ul>
+        <li>SPL Tokens (USDC, others)</li>
+        <li>Solana native tokens (SOL, minus 1 SOL reserve)</li>
+        <li>Jupiter Perpetuals positions</li>
+    </ul>
+    <p><em>Note: Cross-collateral derivatives support is planned but not implemented.</em></p>
+    <h3>5.2 Jupiter Perpetuals Integration</h3>
+    <pre>
 const JUPITER_PERPS_MARKETS = [
     { name: 'Long SOL (USDC)', mint: SOL_MINT, side: 1 },
     { name: 'Long ETH (USDC)', mint: ETH_MINT, side: 1 },
     { name: 'Short BTC (USDC)', mint: BTC_MINT, side: 2 },
-    // ... additional markets
 ];
 
-// Position PDA derivation
 const [positionPda] = PublicKey.findProgramAddressSync([
     Buffer.from("position"),
     wallet.toBuffer(),
@@ -515,191 +255,149 @@ const [positionPda] = PublicKey.findProgramAddressSync([
     custody.toBuffer(),
     collateralCustody.toBuffer(),
     Buffer.from([side])
-], JUPITER_PERPS_PROGRAM_ID);</div>
-
-        <h3>5.3 Price Feed Integration</h3>
-
-        <div class="code-block">// Jupiter Price API integration
+], JUPITER_PERPS_PROGRAM_ID);
+    </pre>
+    <h3>5.3 Price Feed Integration</h3>
+    <pre>
 const fetchJupiterPrices = async (tokenMints: string[]) => {
     const response = await axios.get(
         `${JUPITER_API_URL}?ids=${tokenMints.join(',')}`
     );
     return response.data;
-};</div>
+};
+    </pre>
 
-        <hr>
-
-        <h2 id="security-model">6. Security Model</h2>
-
-        <h3>6.1 Access Control</h3>
-
-        <h4>Authority Structure:</h4>
-        <ul>
-            <li><strong>Gardener Authority:</strong> Can update NAV, manage fund operations</li>
-            <li><strong>User Authority:</strong> Can stake/unstake their own funds only</li>
-            <li><strong>Program Authority:</strong> Handles automated operations</li>
-        </ul>
-
-        <div class="code-block">#[derive(Accounts)]
-pub struct UpdateNav<'info> {
+    <h2 id="section6">6. Security Model</h2>
+    <h3>6.1 Access Control</h3>
+    <p><strong>Authority Structure:</strong></p>
+    <ul>
+        <li><strong>Gardener Authority:</strong> Hardcoded pubkey (GARDENER_PUBKEY) controls NAV updates and program upgrades</li>
+        <li><strong>User Authority:</strong> Can stake/unstake their own funds only</li>
+        <li><strong>Trader Wallet:</strong> Hardcoded address (TRADING_WALLET) manages investments</li>
+    </ul>
+    <pre>
+#[derive(Accounts)]
+pub struct UpdateNav {
     #[account(mut, constraint = gardener.key() == GARDENER_WALLET)]
-    pub gardener: Signer<'info>,
-    
+    pub gardener: Signer,
     #[account(mut, seeds = [FUND_POOL_SEED], bump)]
-    pub fund_pool: Account<'info, FundPool>,
-}</div>
+    pub fund_pool: Account,
+}
+    </pre>
+    <h3>6.2 Economic Security</h3>
+    <ul>
+        <li><strong>Gaming Protection:</strong>
+            <ul>
+                <li>One-directional NAV (smoothed increases, instant decreases)</li>
+                <li>7-day unstaking period prevents rapid in/out trading</li>
+                <li>Locked unstake values prevent timing manipulation</li>
+            </ul>
+        </li>
+        <li><strong>Registry Limits:</strong> User-paid scaling prevents spam</li>
+    </ul>
+    <h3>6.3 Operational Security</h3>
+    <ul>
+        <li><strong>Lambda Security:</strong>
+            <ul>
+                <li>Environment variable protection (GARDENER_PRIVATE_KEY)</li>
+                <li>API key rotation</li>
+                <li>Error handling and fallbacks</li>
+            </ul>
+        </li>
+        <li><strong>Frontend Security:</strong>
+            <ul>
+                <li>Client-side validation</li>
+                <li>Secure RPC connections</li>
+                <li>Transaction simulation before signing</li>
+            </ul>
+        </li>
+    </ul>
 
-        <h3>6.2 Economic Security</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Slashing Protection:</h4>
-                <ul>
-                    <li>No admin keys can drain user funds</li>
-                    <li>Time-delayed withdrawals prevent flash loan attacks</li>
-                    <li>Registry limits prevent spam attacks</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>MEV Protection:</h4>
-                <ul>
-                    <li>7-day averaging reduces manipulation incentives</li>
-                    <li>Oracle integration reduces price manipulation</li>
-                    <li>Front-running protection through commit-reveal schemes</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>6.3 Operational Security</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Lambda Security:</h4>
-                <ul>
-                    <li>Environment variable protection</li>
-                    <li>API key rotation</li>
-                    <li>Error handling and fallbacks</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Frontend Security:</h4>
-                <ul>
-                    <li>Client-side validation</li>
-                    <li>Secure RPC connections</li>
-                    <li>Transaction simulation before signing</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 id="performance">7. Performance & Scalability</h2>
-
-        <h3>7.1 Solana Advantages</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Transaction Performance:</h4>
-                <ul>
-                    <li>400ms average confirmation time</li>
-                    <li>&lt;$0.01 transaction costs</li>
-                    <li>65,000 TPS theoretical throughput</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Account Model Benefits:</h4>
-                <ul>
-                    <li>Parallel transaction processing</li>
-                    <li>Efficient state updates</li>
-                    <li>Rent-exempt account management</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>7.2 Storage Optimization</h3>
-
-        <h4>PDA Reallocation:</h4>
-        <div class="code-block">#[account(
+    <h2 id="section7">7. Performance & Scalability</h2>
+    <h3>7.1 Solana Advantages</h3>
+    <ul>
+        <li><strong>Transaction Performance:</strong>
+            <ul>
+                <li>400ms average confirmation time</li>
+                <li>~0.000005 SOL per transaction</li>
+                <li>65,000 TPS theoretical throughput</li>
+            </ul>
+        </li>
+        <li><strong>Account Model Benefits:</strong>
+            <ul>
+                <li>Parallel transaction processing</li>
+                <li>Efficient state updates</li>
+                <li>Rent-exempt account management</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>7.2 Storage Optimization</h3>
+    <p><strong>PDA Reallocation:</strong></p>
+    <pre>
+#[account(
     mut,
     seeds = [PENDING_CASHOUT_SEED],
     bump,
-    realloc = 8 + PendingCashoutPool::INIT_SPACE + 
-              additional_space_needed,
+    realloc = 8 + PendingCashoutPool::INIT_SPACE + additional_space_needed,
     realloc::payer = user,
     realloc::zero = false
 )]
-pub pending_cashout_pool: Account<'info, PendingCashoutPool>,</div>
-
-        <h4>Efficient Data Structures:</h4>
-        <ul>
-            <li>Circular buffers for NAV history</li>
-            <li>Packed structs for minimal storage</li>
-            <li>Lazy loading for large datasets</li>
-        </ul>
-
-        <h3>7.3 Gas Optimization</h3>
-
-        <h4>Instruction Batching:</h4>
-        <div class="code-block">const transaction = new Transaction()
+pub pending_cashout_pool: Account,
+    </pre>
+    <p><strong>Efficient Data Structures:</strong></p>
+    <ul>
+        <li>Circular buffers for NAV history (84 entries max)</li>
+        <li>Packed structs for minimal storage</li>
+        <li>Lazy loading for large datasets</li>
+    </ul>
+    <h3>7.3 Gas Optimization</h3>
+    <p><strong>Instruction Batching:</strong></p>
+    <pre>
+const transaction = new Transaction()
     .add(createAssociatedTokenAccountInstruction(...))
-    .add(stakeUsdcInstruction(...));</div>
+    .add(stakeUsdcInstruction(...));
+    </pre>
+    <p><strong>Compute Unit Optimization:</strong></p>
+    <ul>
+        <li>Minimal computation in critical paths</li>
+        <li>Optimized Anchor constraints</li>
+        <li>Efficient serialization</li>
+    </ul>
 
-        <h4>Compute Unit Optimization:</h4>
-        <ul>
-            <li>Minimal computation in critical paths</li>
-            <li>Optimized Anchor constraints</li>
-            <li>Efficient serialization</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="api-integration">8. API & Integration Layer</h2>
-
-        <h3>8.1 RPC Architecture</h3>
-
-        <h4>Helius Integration:</h4>
-        <div class="code-block">const getHeliusEndpoint = () => {
+    <h2 id="section8">8. API & Integration Layer</h2>
+    <h3>8.1 RPC Architecture</h3>
+    <p><strong>Helius Integration:</strong></p>
+    <pre>
+const getHeliusEndpoint = () => {
     const apiKey = process.env.REACT_APP_HELIUS_API_KEY;
     return `https://mainnet.helius-rpc.com/?api-key=${apiKey}`;
-};</div>
-
-        <h4>Domain Restrictions:</h4>
-        <ul>
-            <li>Configured at Helius dashboard level</li>
-            <li>Prevents unauthorized API usage</li>
-            <li>Supports localhost for development</li>
-        </ul>
-
-        <h3>8.2 Lambda Function Architecture</h3>
-
-        <div class="code-block">// NAV Update Lambda Structure
+};
+    </pre>
+    <p><strong>Domain Restrictions:</strong></p>
+    <ul>
+        <li>Configured at Helius dashboard level</li>
+        <li>Prevents unauthorized API usage</li>
+        <li>Supports localhost for development</li>
+    </ul>
+    <h3>8.2 Lambda Function Architecture</h3>
+    <pre>
 exports.handler = async (event) => {
     try {
-        // 1. Fetch trading wallet balances
         const solBalance = await getTradingWalletSolBalance();
         const tokenBalances = await getTradingWalletTokenBalances();
-        
-        // 2. Get prices from Jupiter
         const prices = await fetchJupiterPrices(tokenMints);
-        
-        // 3. Calculate portfolio value including Jupiter Perps
         const portfolioValue = await calculatePortfolioValue(
             connection, solBalance, tokenBalances, prices
         );
-        
-        // 4. Update program NAV
         const result = await updateProgramNav(portfolioValue);
-        
         return { statusCode: 200, body: JSON.stringify(result) };
     } catch (error) {
         return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
     }
-};</div>
-
-        <h3>8.3 Frontend State Management</h3>
-
-        <h4>React State Architecture:</h4>
-        <div class="code-block">// Global state management
+};
+    </pre>
+    <h3>8.3 Frontend State Management</h3>
+    <pre>
 const [stats, setStats] = useState({
     totalFundValue: 0,
     totalShares: 0,
@@ -712,89 +410,74 @@ const [userInfo, setUserInfo] = useState({
     shareValue: 0,
     canUnstake: false,
     hasPendingUnstake: false
-});</div>
+});
+    </pre>
 
-        <hr>
-
-        <h2 id="deployment">9. Deployment & Infrastructure</h2>
-
-        <h3>9.1 Solana Program Deployment</h3>
-
-        <h4>Build & Deploy Process:</h4>
-        <div class="code-block"># Build the program
+    <h2 id="section9">9. Deployment & Infrastructure</h2>
+    <h3>9.1 Solana Program Deployment</h3>
+    <p><strong>Build & Deploy Process:</strong></p>
+    <pre>
+# Build the program
 anchor build
 
 # Deploy to mainnet
 anchor deploy --provider.cluster mainnet
 
 # Verify deployment
-solana program show GYe1hhxHhojNy5LfTddD79BdHCnsYC2dsD8KMrKn1se6</div>
-
-        <h4>Program Verification:</h4>
-        <ul>
-            <li>Verifiable builds through Anchor</li>
-            <li>Source code public on GitHub</li>
-            <li>Immutable program addresses</li>
-        </ul>
-
-        <h3>9.2 Frontend Deployment</h3>
-
-        <h4>IPFS Deployment:</h4>
-        <div class="code-block"># Build production frontend
+solana program show GYe1hhxHhojNy5LfTddD79BdHCnsYC2dsD8KMrKn1se6
+    </pre>
+    <p><strong>Program Verification:</strong></p>
+    <ul>
+        <li>Verifiable builds through Anchor</li>
+        <li>Source code public on GitHub</li>
+        <li>Immutable program addresses</li>
+    </ul>
+    <h3>9.2 Frontend Deployment</h3>
+    <p><strong>IPFS Deployment:</strong></p>
+    <pre>
+# Build production frontend
 npm run build
 
 # Upload to Pinata IPFS
-# CID: bafybeigi4xph4lwn2hg2unpn6niv3vl3dfyghl7iy62ku73lum5mpdhw7a</div>
+# CID: bafybeigi4xph4lwn2hg2unpn6niv3vl3dfyghl7iy62ku73lum5mpdhw7a
+    </pre>
+    <p><strong>SNS Integration:</strong></p>
+    <ul>
+        <li>Domain: shrubfund.sol</li>
+        <li>IPFS content delivery</li>
+        <li>Decentralized hosting</li>
+    </ul>
+    <h3>9.3 Lambda Deployment</h3>
+    <p><strong>AWS Lambda Configuration:</strong></p>
+    <ul>
+        <li>Runtime: Node.js 20.x</li>
+        <li>Memory: 512 MB</li>
+        <li>Timeout: 5 minutes</li>
+    </ul>
+    <p><strong>Environment Variables:</strong></p>
+    <ul>
+        <li>SOLANA_RPC_URL</li>
+        <li>GARDENER_PRIVATE_KEY</li>
+        <li>HELIUS_API_KEY</li>
+    </ul>
+    <p><strong>Automated Triggers:</strong></p>
+    <ul>
+        <li>EventBridge scheduled rules (every 2 hours)</li>
+        <li>Manual invocation capability</li>
+        <li>Error handling and retries</li>
+    </ul>
 
-        <h4>SNS Integration:</h4>
-        <ul>
-            <li>Domain: shrubfund.sol</li>
-            <li>IPFS content delivery</li>
-            <li>Decentralized hosting</li>
-        </ul>
-
-        <h3>9.3 Lambda Deployment</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>AWS Lambda Configuration:</h4>
-                <ul>
-                    <li>Runtime: Node.js 18.x</li>
-                    <li>Memory: 512 MB</li>
-                    <li>Timeout: 5 minutes</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Environment Variables:</h4>
-                <ul>
-                    <li>SOLANA_RPC_URL</li>
-                    <li>GARDENER_PRIVATE_KEY</li>
-                    <li>HELIUS_API_KEY</li>
-                </ul>
-            </div>
-        </div>
-
-        <h4>Automated Triggers:</h4>
-        <ul>
-            <li>EventBridge scheduled rules</li>
-            <li>Manual invocation capability</li>
-            <li>Error handling and retries</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="code-repository">10. Code Repository</h2>
-
-        <h3>10.1 Repository Structure</h3>
-
-        <div class="code-block">shrub_fund/
+    <h2 id="section10">10. Code Repository</h2>
+    <h3>10.1 Repository Structure</h3>
+    <pre>
+shrub_fund/
 ├── programs/
 │   └── shrub_fund/
 │       └── src/
-│           ├── lib.rs              # Main program logic
-│           ├── state/              # Data structures
-│           ├── instructions/       # Instruction handlers
-│           └── errors.rs           # Custom error types
+│           ├── lib.rs
+│           ├── state/
+│           ├── instructions/
+│           └── errors.rs
 ├── migrations/
 ├── tests/
 ├── Anchor.toml
@@ -802,8 +485,8 @@ npm run build
 
 shrub-fund-frontend/
 ├── src/
-│   ├── App.tsx                     # Main React component
-│   ├── App.css                     # Styling
+│   ├── App.tsx
+│   ├── App.css
 │   └── assets/
 ├── public/
 │   ├── index.html
@@ -811,152 +494,118 @@ shrub-fund-frontend/
 └── package.json
 
 lambda-nav-updater/
-├── index.js                        # Lambda function
+├── index.js
 ├── package.json
-└── deployment/</div>
-
-        <h3>10.2 Key Files & Functions</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Core Program Logic (lib.rs):</h4>
-                <ul>
-                    <li><code>stake_usdc()</code>: User staking implementation</li>
-                    <li><code>initiate_unstake()</code>: Begin withdrawal process</li>
-                    <li><code>complete_unstake()</code>: Finalize withdrawal</li>
-                    <li><code>update_optimized_nav()</code>: NAV update from Lambda</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Frontend Core (App.tsx):</h4>
-                <ul>
-                    <li><code>ShrubFundInterface</code>: Main UI component</li>
-                    <li><code>handleStakeFund()</code>: Staking transaction logic</li>
-                    <li><code>fetchProtocolStats()</code>: Real-time data fetching</li>
-                    <li>Gardener dashboard with comprehensive monitoring</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Lambda NAV Updater (index.js):</h4>
-                <ul>
-                    <li><code>calculatePortfolioValue()</code>: Multi-asset valuation</li>
-                    <li><code>getJupiterPerpsPositionValue()</code>: Perpetuals calculation</li>
-                    <li><code>updateProgramNav()</code>: On-chain NAV update</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>10.3 Testing & Quality Assurance</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Anchor Tests:</h4>
-                <div class="code-block">#[tokio::test]
+└── deployment/
+    </pre>
+    <h3>10.2 Key Files & Functions</h3>
+    <h4>Core Program Logic (lib.rs):</h4>
+    <ul>
+        <li>stake_usdc(): User staking implementation</li>
+        <li>initiate_unstake(): Begin withdrawal process</li>
+        <li>complete_unstake(): Finalize withdrawal</li>
+        <li>update_optimized_nav(): NAV update from Lambda</li>
+    </ul>
+    <h4>Frontend Core (App.tsx):</h4>
+    <ul>
+        <li>ShrubFundInterface: Main UI component</li>
+        <li>handleStakeFund(): Staking transaction logic</li>
+        <li>fetchProtocolStats(): Real-time data fetching</li>
+        <li>Gardener dashboard with comprehensive monitoring</li>
+    </ul>
+    <h4>Lambda NAV Updater (index.js):</h4>
+    <ul>
+        <li>calculatePortfolioValue(): Multi-asset valuation</li>
+        <li>getJupiterPerpsPositionValue(): Perpetuals calculation</li>
+        <li>updateProgramNav(): On-chain NAV update</li>
+    </ul>
+    <h3>10.3 Testing & Quality Assurance</h3>
+    <h4>Anchor Tests:</h4>
+    <pre>
+#[tokio::test]
 async fn test_stake_usdc() {
     // Test user staking flow
 }
 
-#[tokio::test]  
+#[tokio::test]
 async fn test_unstake_flow() {
     // Test complete unstaking process
-}</div>
-            </div>
-            <div class="feature-item">
-                <h4>Frontend Testing:</h4>
-                <ul>
-                    <li>Component unit tests</li>
-                    <li>Integration testing with devnet</li>
-                    <li>User acceptance testing</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Lambda Testing:</h4>
-                <ul>
-                    <li>Local testing with mock data</li>
-                    <li>Staging environment validation</li>
-                    <li>Production monitoring</li>
-                </ul>
-            </div>
-        </div>
+}
+    </pre>
+    <h4>Frontend Testing:</h4>
+    <ul>
+        <li>Component unit tests</li>
+        <li>Integration testing with devnet</li>
+        <li>User acceptance testing</li>
+    </ul>
+    <h4>Lambda Testing:</h4>
+    <ul>
+        <li>Local testing with mock data</li>
+        <li>Staging environment validation</li>
+        <li>Production monitoring</li>
+    </ul>
 
-        <hr>
+    <h2 id="section11">11. Future Enhancements</h2>
+    <h3>11.1 Planned Technical Improvements</h3>
+    <ul>
+        <li><strong>Automation:</strong>
+            <ul>
+                <li>Automated arbitrage trading bot (USDC/USDT)</li>
+                <li>Automated cashout process from assets to USDC</li>
+                <li>TradingView signal integration via webhooks</li>
+            </ul>
+        </li>
+        <li><strong>Multi-Chain Support:</strong>
+            <ul>
+                <li>Cross-chain bridge integration</li>
+                <li>EVM compatibility</li>
+                <li>Layer 2 scaling solutions</li>
+            </ul>
+        </li>
+        <li><strong>Advanced Features:</strong>
+            <ul>
+                <li>Governance token implementation</li>
+                <li>Yield optimization strategies</li>
+                <li>Institutional investor tools</li>
+            </ul>
+        </li>
+        <li><strong>Performance Optimizations:</strong>
+            <ul>
+                <li>Compressed account support</li>
+                <li>State compression for scalability</li>
+                <li>Advanced caching mechanisms</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>11.2 Research Areas</h3>
+    <ul>
+        <li><strong>MEV Protection:</strong>
+            <ul>
+                <li>Threshold decryption integration</li>
+                <li>Commit-reveal schemes for large trades</li>
+                <li>Temporal shielding mechanisms</li>
+            </ul>
+        </li>
+        <li><strong>Decentralized Governance:</strong>
+            <ul>
+                <li>DAO structure implementation</li>
+                <li>Quadratic voting mechanisms</li>
+                <li>Delegation and liquid democracy</li>
+            </ul>
+        </li>
+    </ul>
 
-        <h2 id="future-enhancements">11. Future Enhancements</h2>
+    <h2>Conclusion</h2>
+    <p>The Shrub Fund technical architecture combines Solana's high performance with sophisticated financial engineering. Its modular design, robust security model, and scalable architecture provide a foundation for decentralized fund management. Ongoing development (e.g., automation, governance) will enhance functionality while maintaining user sovereignty and transparency.</p>
 
-        <h3>11.1 Planned Technical Improvements</h3>
+    <h2>Technical References</h2>
+    <ul>
+        <li><a href="https://docs.solana.com/">Solana Documentation</a></li>
+        <li><a href="https://www.anchor-lang.com/">Anchor Framework</a></li>
+        <li><a href="https://docs.jup.ag/">Jupiter Protocol</a></li>
+        <li><a href="https://spl.solana.com/token">SPL Token Program</a></li>
+    </ul>
 
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Multi-Chain Support:</h4>
-                <ul>
-                    <li>Cross-chain bridge integration</li>
-                    <li>Ethereum Virtual Machine compatibility</li>
-                    <li>Layer 2 scaling solutions</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Advanced Features:</h4>
-                <ul>
-                    <li>Governance token implementation</li>
-                    <li>Yield optimization strategies</li>
-                    <li>Institutional investor tools</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Performance Optimizations:</h4>
-                <ul>
-                    <li>Compressed account support</li>
-                    <li>State compression for scalability</li>
-                    <li>Advanced caching mechanisms</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>11.2 Research Areas</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>MEV Protection:</h4>
-                <ul>
-                    <li>Threshold decryption integration</li>
-                    <li>Commit-reveal schemes for large trades</li>
-                    <li>Temporal shielding mechanisms</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Decentralized Governance:</h4>
-                <ul>
-                    <li>DAO structure implementation</li>
-                    <li>Quadratic voting mechanisms</li>
-                    <li>Delegation and liquid democracy</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2>Conclusion</h2>
-
-        <div class="highlight-box">
-            <p>The Shrub Fund technical architecture represents a significant advancement in decentralized fund management, combining Solana's high performance with sophisticated financial engineering. The system's modular design, comprehensive security model, and scalable architecture position it as a foundation for the next generation of DeFi investment products.</p>
-        </div>
-
-        <p>Through careful attention to performance, security, and user experience, Shrub Fund demonstrates that complex financial products can be successfully implemented in a fully decentralized manner without sacrificing functionality or safety.</p>
-
-        <hr>
-
-        <h2>Technical References</h2>
-
-        <ul>
-            <li><strong>Solana Documentation:</strong> <a href="https://docs.solana.com/" target="_blank">https://docs.solana.com/</a></li>
-            <li><strong>Anchor Framework:</strong> <a href="https://www.anchor-lang.com/" target="_blank">https://www.anchor-lang.com/</a></li>
-            <li><strong>Jupiter Protocol:</strong> <a href="https://docs.jup.ag/" target="_blank">https://docs.jup.ag/</a></li>
-            <li><strong>SPL Token Program:</strong> <a href="https://spl.solana.com/token" target="_blank">https://spl.solana.com/token</a></li>
-        </ul>
-
-        <hr>
-
-        <p><em>© 2025 Shrub Fund. Technical documentation is open source and available for community review.</em></p>
-    </div>
+    <p>© 2025 Shrub Fund. Technical documentation is open source and available for community review.</p>
 </body>
 </html>

@@ -2,561 +2,253 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrub Fund White Paper - Decentralized Fund Management on Solana</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2d3748;
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            border-bottom: 3px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2d3748;
-            font-size: 1.8em;
-            margin-top: 2em;
-            margin-bottom: 1em;
-            border-left: 4px solid #4CAF50;
-            padding-left: 15px;
-        }
-        h3 {
-            color: #4a5568;
-            font-size: 1.3em;
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-        }
-        .meta-info {
-            background: #e8f4f8;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        .cross-reference {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .cross-reference a {
-            color: #856404;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .cross-reference a:hover {
-            text-decoration: underline;
-        }
-        ul, ol {
-            margin: 1em 0;
-            padding-left: 2em;
-        }
-        li {
-            margin: 0.5em 0;
-        }
-        .highlight-box {
-            background: #f0f8ff;
-            border-left: 4px solid #007acc;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .feature-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #4CAF50;
-        }
-        .feature-item h4 {
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .roadmap-phase {
-            background: #f8f9fa;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            border-left: 4px solid #4CAF50;
-        }
-        .roadmap-phase h3 {
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .completed {
-            border-left-color: #28a745;
-            background: #d4edda;
-        }
-        .disclaimer {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 30px 0;
-            font-size: 0.9em;
-        }
-        .asterisk-note {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 30px 0;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-        hr {
-            border: none;
-            height: 2px;
-            background: linear-gradient(to right, #4CAF50, transparent);
-            margin: 40px 0;
-        }
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .toc {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .toc h3 {
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .toc ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin: 8px 0;
-        }
-        .toc a {
-            color: #4a5568;
-        }
-    </style>
+    <title>Shrub Fund White Paper</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Shrub Fund White Paper</h1>
-        <h2 style="border-left: none; padding-left: 0; margin-top: 0;">Decentralized Fund Management on Solana</h2>
-        
-        <div class="meta-info">
-            <strong>Version 1.0</strong><br>
-            <strong>Date:</strong> July 2025<br>
-            <strong>Author:</strong> Shrub Fund Team
-        </div>
-
-        <div class="cross-reference">
-            📋 <strong>Also Available:</strong> <a href="./technical-whitepaper.html">Technical White Paper</a> - Deep technical implementation details
-        </div>
-
-        <hr>
-
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#executive-summary">Executive Summary</a></li>
-                <li><a href="#introduction">1. Introduction</a></li>
-                <li><a href="#protocol-overview">2. Protocol Overview</a></li>
-                <li><a href="#technical-innovation">3. Technical Innovation</a></li>
-                <li><a href="#market-opportunity">4. Market Opportunity</a></li>
-                <li><a href="#tokenomics">5. Tokenomics & Economics</a></li>
-                <li><a href="#governance">6. Governance & Risk Management</a></li>
-                <li><a href="#roadmap">7. Roadmap</a></li>
-                <li><a href="#team">8. Team & Partners</a></li>
-                <li><a href="#conclusion">9. Conclusion</a></li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <h2 id="executive-summary">Executive Summary</h2>
-
-        <div class="highlight-box">
-            <p>Shrub Fund represents a paradigm shift in decentralized finance, introducing a fully on-chain, transparent fund management protocol built on Solana. By combining professional trading expertise with blockchain transparency and user sovereignty, Shrub Fund eliminates traditional barriers to sophisticated investment strategies while maintaining complete decentralization*.</p>
-        </div>
-
-        <p>Unlike traditional hedge funds that require minimum investments of $100K+ and lock up capital for months, Shrub Fund enables any user to participate in professional trading strategies with as little as $1 USDC, withdraw with just a 7-day notice period, and maintain full transparency of all trades and positions in real-time.</p>
-
-        <p>The protocol has successfully deployed on Solana mainnet with a modest $10k initial test fund, demonstrating real functional validation.</p>
-
-        <hr>
-
-        <h2 id="introduction">1. Introduction</h2>
-
-        <h3>The Problem</h3>
-
-        <p>Traditional investment management faces critical limitations:</p>
-
-        <ul>
-            <li><strong>High Barriers to Entry:</strong> Minimum investments of $100,000+ effectively excluding retail investors</li>
-            <li><strong>Opacity:</strong> Black-box strategies with quarterly reporting at best</li>
-            <li><strong>Long Lock-ups:</strong> Capital tied up for 1-2 years with limited liquidity</li>
-            <li><strong>High Fees:</strong> 2% management + 20% performance fees</li>
-            <li><strong>Centralized Risk:</strong> Single points of failure and counterparty risk</li>
-        </ul>
-
-        <p>DeFi has democratized many financial services, but sophisticated fund management remains centralized and inaccessible to most users.</p>
-
-        <h3>The Solution</h3>
-
-        <p>Shrub Fund introduces a fully decentralized fund management protocol* that:</p>
-
-        <ul>
-            <li><strong>Eliminates Minimums:</strong> Start investing with any amount of USDC</li>
-            <li><strong>Ensures Transparency:</strong> All trades, positions, and NAV calculations on-chain, and easily monitored live using DeFi portfolio trackers</li>
-            <li><strong>Provides Liquidity:</strong> 7-day unstaking period vs. years-long lockups</li>
-            <li><strong>Reduces Costs:</strong> No management fees, minimal 2% performance-based compensation only</li>
-            <li><strong>Removes Intermediaries:</strong> Direct smart contract interactions, no custodians*</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="protocol-overview">2. Protocol Overview</h2>
-
-        <h3>Core Concept</h3>
-
-        <p>Shrub Fund operates as an open-ended investment vehicle where users stake USDC to receive proportional shares representing their ownership in a professionally managed trading portfolio. The fund's value is calculated in real-time based on current market prices of all holdings, including traditional tokens and advanced derivatives.</p>
-
-        <h3>Key Features</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>🏛️ Decentralized Architecture</h4>
-                <ul>
-                    <li>Smart contracts on Solana handle all fund operations</li>
-                    <li>No central authority can freeze or confiscate user funds*</li>
-                    <li>Transparent, verifiable code and operations</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>📊 Real-Time NAV</h4>
-                <ul>
-                    <li>Live portfolio valuation updated every 2 hours</li>
-                    <li>Dual NAV system: optimized (7-day smoothed) for stability, real-time for accuracy</li>
-                    <li>Public portfolio dashboard showing all positions</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>⚡ Solana Performance</h4>
-                <ul>
-                    <li>Sub-second transaction finality</li>
-                    <li>Transaction costs under $0.01</li>
-                    <li>High throughput for seamless user experience</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>🔄 Flexible Liquidity</h4>
-                <ul>
-                    <li>Stake/unstake anytime with minimal friction</li>
-                    <li>7-day unstaking period ensures fund stability</li>
-                    <li>No lockup periods or redemption penalties</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>🎯 Professional Management</h4>
-                <ul>
-                    <li>Experienced trading team with proven track record</li>
-                    <li>Focus on risk-adjusted returns and capital preservation</li>
-                    <li>Diversified strategies across DeFi and traditional crypto markets</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 id="technical-innovation">3. Technical Innovation</h2>
-
-        <h3>Dual NAV System</h3>
-
-        <p>Shrub Fund pioneered a sophisticated dual NAV calculation system:</p>
-
-        <ul>
-            <li><strong>Optimized NAV:</strong> 7-day rolling average for stable user interface and reduced manipulation</li>
-            <li><strong>Real NAV:</strong> Live market value for accurate entry/exit pricing</li>
-        </ul>
-
-        <p>This ensures users receive fair pricing while maintaining interface stability during market volatility.</p>
-
-        <h3>Advanced Position Tracking</h3>
-
-        <p>The protocol tracks complex financial instruments including:</p>
-        <ul>
-            <li>Spot cryptocurrency holdings</li>
-            <li>Jupiter Perpetuals positions (long/short)</li>
-            <li>Cross-collateral derivatives</li>
-            <li>Real-time P&L calculations including fees and funding costs</li>
-        </ul>
-
-        <h3>Scalable Registry System</h3>
-
-        <p>A novel registry architecture supports unlimited users through:</p>
-        <ul>
-            <li>Hierarchical user organization (100,000 users per registry)</li>
-            <li>Automatic registry expansion when capacity reached</li>
-            <li>Efficient storage and lookup mechanisms</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="market-opportunity">4. Market Opportunity</h2>
-
-        <h3>Total Addressable Market</h3>
-
-        <ul>
-            <li><strong>Global Hedge Fund Industry:</strong> $4.7 trillion AUM</li>
-            <li><strong>Crypto Fund Management:</strong> $67 billion AUM (growing 40% annually)</li>
-            <li><strong>DeFi Total Value Locked:</strong> $200+ billion</li>
-            <li><strong>Retail Crypto Investors:</strong> 50+ million globally</li>
-        </ul>
-
-        <h3>Competitive Advantages</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>vs. Traditional Hedge Funds:</h4>
-                <ul>
-                    <li>Accessible to retail investors</li>
-                    <li>Complete transparency</li>
-                    <li>Instant liquidity (7 days vs. months)</li>
-                    <li>Lower fees</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>vs. DeFi Yield Farms:</h4>
-                <ul>
-                    <li>Professional active management</li>
-                    <li>Risk management and diversification</li>
-                    <li>Sophisticated strategies beyond simple farming</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>vs. Centralized Crypto Funds:</h4>
-                <ul>
-                    <li>Self-custody of assets*</li>
-                    <li>Permissionless access</li>
-                    <li>Real-time transparency</li>
-                    <li>No geographic restrictions</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 id="tokenomics">5. Tokenomics & Economics</h2>
-
-        <h3>Fee Structure</h3>
-
-        <p>Shrub Fund operates on a performance-only fee model:</p>
-        <ul>
-            <li><strong>0% Management Fees:</strong> No ongoing costs for holding positions</li>
-            <li><strong>Performance Fees:</strong> Competitive rates only on profits generated</li>
-            <li><strong>Gas Fees:</strong> Users pay minimal Solana transaction costs (&lt;$0.01)</li>
-        </ul>
-
-        <h3>Value Accrual</h3>
-
-        <p>Value accrues to participants through:</p>
-        <ol>
-            <li><strong>Trading Returns:</strong> Share of fund performance based on holdings</li>
-            <li><strong>Compound Growth:</strong> Automatic reinvestment of trading profits</li>
-            <li><strong>Efficiency Gains:</strong> Lower costs than traditional alternatives</li>
-        </ol>
-
-        <h3>Economic Sustainability</h3>
-
-        <p>The model is sustainable through:</p>
-        <ul>
-            <li>Performance-based compensation aligns incentives</li>
-            <li>Minimal operational overhead (no offices, minimal staff)</li>
-            <li>Scalable technology infrastructure</li>
-            <li>Growing AUM increases absolute fee generation</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="governance">6. Governance & Risk Management</h2>
-
-        <h3>Decentralized Governance</h3>
-
-        <p>While trading decisions remain with the professional team for efficiency, key protocol decisions follow decentralized governance*:</p>
-        <ul>
-            <li>Fee structure changes</li>
-            <li>Major protocol upgrades</li>
-            <li>Emergency procedures</li>
-            <li>Fund closure decisions</li>
-        </ul>
-
-        <h3>Risk Management</h3>
-
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>Smart Contract Risk:</h4>
-                <ul>
-                    <li>Audited contracts with formal verification</li>
-                    <li>Gradual rollout and battle-testing</li>
-                    <li>Multi-signature controls for critical functions*</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Market Risk:</h4>
-                <ul>
-                    <li>Diversified portfolio across multiple assets</li>
-                    <li>Risk limits and stop-loss procedures</li>
-                    <li>Regular stress testing and scenario analysis</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Operational Risk:</h4>
-                <ul>
-                    <li>Redundant systems and backup procedures</li>
-                    <li>Real-time monitoring and alerting</li>
-                    <li>Incident response protocols</li>
-                </ul>
-            </div>
-            <div class="feature-item">
-                <h4>Liquidity Risk:</h4>
-                <ul>
-                    <li>7-day unstaking buffer for portfolio rebalancing</li>
-                    <li>Diversified liquidity sources</li>
-                    <li>Emergency liquidity procedures</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 id="roadmap">7. Roadmap</h2>
-
-        <div class="roadmap-phase completed">
-            <h3>Phase 1: Foundation (Completed ✅)</h3>
-            <ul>
-                <li>Core protocol development and deployment</li>
-                <li>Basic fund management functionality</li>
-                <li>Web interface and user onboarding</li>
-                <li>Initial fund seeding and operations</li>
-            </ul>
-        </div>
-
-        <div class="roadmap-phase">
-            <h3>Phase 2: Enhancement (Q1 2025)</h3>
-            <ul>
-                <li>Advanced trading strategies integration</li>
-                <li>Mobile application development</li>
-                <li>API for third-party integrations</li>
-                <li>Enhanced analytics and reporting</li>
-            </ul>
-        </div>
-
-        <div class="roadmap-phase">
-            <h3>Phase 3: Expansion (Q2-Q3 2025)</h3>
-            <ul>
-                <li>Multi-asset fund options (BTC, ETH strategies)</li>
-                <li>Cross-chain bridge development</li>
-                <li>Institutional investor tools</li>
-                <li>Governance token launch</li>
-            </ul>
-        </div>
-
-        <div class="roadmap-phase">
-            <h3>Phase 4: Full Automation (Q4 2025 - Q1 2026)</h3>
-            <ul>
-                <li>Complete trading automation implementation</li>
-                <li>Elimination of manual trading wallet management</li>
-                <li>Fund-of-funds architecture</li>
-                <li>Third-party manager onboarding</li>
-                <li>Derivatives and structured products</li>
-                <li>Global regulatory compliance</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <h2 id="team">8. Team & Partners</h2>
-
-        <h3>Core Team</h3>
-        <ul>
-            <li><strong>Experienced DeFi developers</strong> with years in Solana ecosystem</li>
-            <li><strong>Professional traders</strong> with traditional finance backgrounds</li>
-            <li><strong>Product specialists</strong> focused on user experience</li>
-            <li><strong>Security experts</strong> ensuring protocol safety</li>
-        </ul>
-
-        <h3>Technology Partners</h3>
-        <ul>
-            <li><strong>Solana Foundation:</strong> Core blockchain infrastructure</li>
-            <li><strong>Jupiter:</strong> DEX aggregation and perpetuals</li>
-            <li><strong>Helius:</strong> RPC infrastructure and indexing</li>
-            <li><strong>Step Finance:</strong> Portfolio tracking and analytics</li>
-        </ul>
-
-        <h3>Advisors</h3>
-        <ul>
-            <li>Industry veterans from traditional finance</li>
-            <li>DeFi protocol founders and researchers</li>
-            <li>Regulatory and compliance specialists</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="conclusion">9. Conclusion</h2>
-
-        <div class="highlight-box">
-            <p>Shrub Fund represents the future of investment management - transparent, accessible, efficient, and truly decentralized*. By combining the best of traditional finance expertise with cutting-edge blockchain technology, we're creating a new paradigm that benefits all participants.</p>
-        </div>
-
-        <p>The protocol's successful mainnet deployment with initial test funding demonstrates real functional validation. As the DeFi ecosystem continues to mature, Shrub Fund is positioned to become the leading platform for professional, transparent, and accessible fund management.</p>
-
-        <div class="highlight-box">
-            <p><strong>The future of finance is transparent, accessible, and decentralized*. The future is Shrub Fund.</strong></p>
-        </div>
-
-        <hr>
-
-        <div class="disclaimer">
-            <h3>Legal Disclaimer</h3>
-            <p>This white paper is for informational purposes only and does not constitute an offer to sell or a solicitation to buy any securities or financial instruments. Cryptocurrency investments involve substantial risk and may result in the loss of your entire investment. Past performance does not guarantee future results. Please conduct your own research and consult with qualified financial advisors before making investment decisions.</p>
-        </div>
-
-        <hr>
-
-        <h2>Contact Information</h2>
-
-        <ul>
-            <li><strong>Website:</strong> shrubfund.app</li>
-            <li><strong>Twitter:</strong> @shrubfund</li>
-            <li><strong>Documentation:</strong> <a href="./technical-whitepaper.html">Technical White Paper Available</a></li>
-            <li><strong>Support:</strong> Available through web interface</li>
-        </ul>
-
-        <div class="asterisk-note">
-            <p>*Shrub Fund currently manually managed by Trading Wallet. Roadmap includes 100% automation by Jan 2026</p>
-            <p><em>© 2025 Shrub Fund. All rights reserved.</em></p>
-        </div>
-    </div>
+    <h1>Shrub Fund White Paper</h1>
+    <h2>Decentralized Fund Management on Solana</h2>
+    <p><strong>Version 1.0</strong><br>Date: July 2025<br>Author: Shrub Fund Team</p>
+    <p>📋 Also Available: <a href="technical-whitepaper.html">Technical White Paper</a> - Deep technical implementation details</p>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#executive">Executive Summary</a></li>
+        <li><a href="#section1">1. Introduction</a></li>
+        <li><a href="#section2">2. Protocol Overview</a></li>
+        <li><a href="#section3">3. Technical Innovation</a></li>
+        <li><a href="#section4">4. Market Opportunity</a></li>
+        <li><a href="#section5">5. Tokenomics & Economics</a></li>
+        <li><a href="#section6">6. Governance & Risk Management</a></li>
+        <li><a href="#section7">7. Roadmap</a></li>
+        <li><a href="#section8">8. Team & Partners</a></li>
+        <li><a href="#section9">9. Conclusion</a></li>
+    </ul>
+
+    <h2 id="executive">Executive Summary</h2>
+    <p>Shrub Fund is a decentralized fund management protocol on Solana, combining professional trading with blockchain transparency. Users stake USDC to receive shares in a managed portfolio, with a 7-day unstaking period for liquidity. The protocol is live on Solana mainnet with a $10k test fund, demonstrating functional validation. Currently managed by a human Trader wallet, full automation is planned by Q1 2026.</p>
+
+    <h2 id="section1">1. Introduction</h2>
+    <h3>The Problem</h3>
+    <ul>
+        <li><strong>High Barriers to Entry:</strong> Traditional funds require $100,000+ minimums</li>
+        <li><strong>Opacity:</strong> Limited visibility into strategies and performance</li>
+        <li><strong>Long Lock-ups:</strong> Capital tied up for 1-2 years</li>
+        <li><strong>High Fees:</strong> 2% management + 20% performance fees</li>
+        <li><strong>Centralized Risk:</strong> Single points of failure</li>
+    </ul>
+    <h3>The Solution</h3>
+    <p>Shrub Fund offers:</p>
+    <ul>
+        <li><strong>No Minimums:</strong> Invest with any amount of USDC</li>
+        <li><strong>Transparency:</strong> On-chain trades and NAV, trackable via DeFi tools</li>
+        <li><strong>Liquidity:</strong> 7-day unstaking period</li>
+        <li><strong>Low Costs:</strong> No management fees; performance fees planned</li>
+        <li><strong>Decentralized Operations:</strong> Smart contract-based, managed by Trader wallet (full automation by Q1 2026)</li>
+    </ul>
+
+    <h2 id="section2">2. Protocol Overview</h2>
+    <h3>Core Concept</h3>
+    <p>Users stake USDC to receive shares in a professionally managed portfolio, with real-time valuation of holdings (tokens, SOL, Jupiter Perpetuals). A 7-day unstaking period ensures fund stability.</p>
+    <h3>Key Features</h3>
+    <h4>🏛️ Decentralized Architecture</h4>
+    <ul>
+        <li>Smart contracts on Solana</li>
+        <li>No central freeze authority (managed by Trader/Gardener)</li>
+        <li>Transparent code and operations</li>
+    </ul>
+    <h4>📊 Real-Time NAV</h4>
+    <ul>
+        <li>Updated every 2 hours</li>
+        <li>Dual NAV: real-time for staking, optimized (smoothed) for unstaking/UI</li>
+        <li>Public portfolio dashboard</li>
+    </ul>
+    <h4>⚡ Solana Performance</h4>
+    <ul>
+        <li>Sub-second transaction finality</li>
+        <li>~0.000005 SOL transaction costs</li>
+        <li>High throughput</li>
+    </ul>
+    <h4>🔄 Flexible Liquidity</h4>
+    <ul>
+        <li>Stake/unstake anytime</li>
+        <li>7-day unstaking period</li>
+        <li>No lockup penalties</li>
+    </ul>
+    <h4>🎯 Professional Management</h4>
+    <ul>
+        <li>Human Trader wallet manages investments</li>
+        <li>Focus on risk-adjusted returns</li>
+        <li>Diversified strategies (tokens, perps)</li>
+    </ul>
+
+    <h2 id="section3">3. Technical Innovation</h2>
+    <h3>Dual NAV System</h3>
+    <p>Shrub Fund uses a one-directional NAV system:</p>
+    <ul>
+        <li><strong>Real NAV:</strong> Live market value for staking (premium pricing)</li>
+        <li><strong>Optimized NAV:</strong> Smoothed increases (7-day average), instant decreases for unstaking (discount pricing), preventing gaming</li>
+    </ul>
+    <h3>Advanced Position Tracking</h3>
+    <ul>
+        <li>Spot cryptocurrency holdings</li>
+        <li>Jupiter Perpetuals (long/short)</li>
+        <li>Real-time P&L with fees</li>
+        <li><em>Cross-collateral derivatives planned</em></li>
+    </ul>
+    <h3>Scalable Registry System</h3>
+    <ul>
+        <li>100,000 users per registry</li>
+        <li>Automatic, user-paid expansion</li>
+        <li>Efficient storage/lookup</li>
+    </ul>
+
+    <h2 id="section4">4. Market Opportunity</h2>
+    <h3>Total Addressable Market</h3>
+    <ul>
+        <li>Global Hedge Funds: $4.7 trillion AUM</li>
+        <li>Crypto Funds: $67 billion AUM (40% annual growth)</li>
+        <li>DeFi TVL: $200+ billion</li>
+        <li>Retail Crypto Investors: 50+ million</li>
+    </ul>
+    <h3>Competitive Advantages</h3>
+    <h4>vs. Traditional Hedge Funds:</h4>
+    <ul>
+        <li>Accessible to retail</li>
+        <li>Transparent operations</li>
+        <li>7-day liquidity</li>
+        <li>Lower costs</li>
+    </ul>
+    <h4>vs. DeFi Yield Farms:</h4>
+    <ul>
+        <li>Professional management</li>
+        <li>Risk diversification</li>
+        <li>Sophisticated strategies</li>
+    </ul>
+    <h4>vs. Centralized Crypto Funds:</h4>
+    <ul>
+        <li>Self-custody via smart contracts</li>
+        <li>Permissionless access</li>
+        <li>Real-time transparency</li>
+    </ul>
+
+    <h2 id="section5">5. Tokenomics & Economics</h2>
+    <h3>Fee Structure</h3>
+    <ul>
+        <li><strong>Management Fees:</strong> 0%</li>
+        <li><strong>Performance Fees:</strong> 2% on profits (planned, not yet implemented)</li>
+        <li><strong>Gas/Scaling Fees:</strong> Users pay ~0.000005 SOL per transaction and registry expansion costs</li>
+    </ul>
+    <h3>Value Accrual</h3>
+    <ul>
+        <li><strong>Trading Returns:</strong> Proportional to share holdings</li>
+        <li><strong>Compound Growth:</strong> Reinvested profits</li>
+        <li><strong>Efficiency:</strong> Lower costs than traditional funds</li>
+    </ul>
+    <h3>Economic Sustainability</h3>
+    <ul>
+        <li>Planned performance fees align incentives</li>
+        <li>Minimal operational overhead</li>
+        <li>Scalable infrastructure</li>
+        <li>Growing AUM increases potential fees</li>
+    </ul>
+
+    <h2 id="section6">6. Governance & Risk Management</h2>
+    <h3>Governance</h3>
+    <p>Currently centralized via Gardener (program upgrades) and Trader (portfolio management). Decentralized governance planned for Phase 3 (Q2-Q3 2025) with governance token.</p>
+    <h3>Risk Management</h3>
+    <h4>Smart Contract Risk:</h4>
+    <ul>
+        <li>One-directional NAV and 7-day unstaking prevent gaming</li>
+        <li>Hardcoded Gardener/Trader controls</li>
+        <li>Audits planned but not completed</li>
+    </ul>
+    <h4>Market Risk:</h4>
+    <ul>
+        <li>Diversified portfolio (tokens, perps)</li>
+        <li>Risk limits and monitoring</li>
+        <li>Stress testing planned</li>
+    </ul>
+    <h4>Operational Risk:</h4>
+    <ul>
+        <li>Real-time monitoring (pending cashouts, NAV updates)</li>
+        <li>Incident response protocols</li>
+        <li>Lambda failure risks (stale NAV)</li>
+    </ul>
+    <h4>Liquidity Risk:</h4>
+    <ul>
+        <li>7-day unstaking buffer</li>
+        <li>Trader-funded PendingCashoutPool</li>
+        <li>Monitoring of cashout vs. trading balance</li>
+    </ul>
+
+    <h2 id="section7">7. Roadmap</h2>
+    <h3>Phase 1: Foundation (In Progress)</h3>
+    <ul>
+        <li>Core protocol deployed</li>
+        <li>Web interface live</li>
+        <li>Initial $10k test fund</li>
+        <li><em>Pending: Automated arb bot, cashout automation, TradingView signals</em></li>
+    </ul>
+    <h3>Phase 2: Enhancement (Q1 2025)</h3>
+    <ul>
+        <li>Advanced trading strategies</li>
+        <li>Mobile application</li>
+        <li>API integrations</li>
+        <li>Enhanced analytics</li>
+    </ul>
+    <h3>Phase 3: Expansion (Q2-Q3 2025)</h3>
+    <ul>
+        <li>Multi-asset fund options</li>
+        <li>Cross-chain bridges</li>
+        <li>Institutional tools</li>
+        <li>Governance token launch</li>
+    </ul>
+    <h3>Phase 4: Full Automation (Q4 2025 - Q1 2026)</h3>
+    <ul>
+        <li>Complete trading automation</li>
+        <li>Fund-of-funds architecture</li>
+        <li>Third-party manager onboarding</li>
+        <li>Derivatives support</li>
+        <li>Regulatory compliance</li>
+    </ul>
+
+    <h2 id="section8">8. Team & Partners</h2>
+    <h3>Core Team</h3>
+    <ul>
+        <li>DeFi developers (Solana expertise)</li>
+        <li>Professional traders (finance background)</li>
+        <li>Product specialists (UX focus)</li>
+        <li>Security experts</li>
+    </ul>
+    <h3>Technology Partners</h3>
+    <ul>
+        <li>Solana Foundation: Blockchain infrastructure</li>
+        <li>Jupiter: DEX and perpetuals</li>
+        <li>Helius: RPC infrastructure</li>
+        <li>Step Finance: Portfolio analytics</li>
+    </ul>
+    <h3>Advisors</h3>
+    <ul>
+        <li>Finance industry veterans</li>
+        <li>DeFi protocol founders</li>
+        <li>Regulatory specialists</li>
+    </ul>
+
+    <h2 id="section9">9. Conclusion</h2>
+    <p>Shrub Fund combines professional trading with blockchain transparency, offering accessible, liquid, and cost-effective investment management. Currently managed by a Trader wallet, the protocol aims for full automation by Q1 2026, positioning it as a leader in DeFi fund management.</p>
+
+    <h2>Legal Disclaimer</h2>
+    <p>This white paper is informational and not an offer to sell securities. Cryptocurrency investments carry high risks, including total loss. Conduct your own research and consult advisors before investing.</p>
+
+    <h2>Contact Information</h2>
+    <ul>
+        <li>Website: shrubfund.app</li>
+        <li>Twitter: @shrubfund</li>
+        <li>Documentation: <a href="technical-whitepaper.html">Technical White Paper</a></li>
+        <li>Support: Available via web interface</li>
+    </ul>
+
+    <p><em>*Currently managed by Trading Wallet. Full automation planned by Q1 2026.</em></p>
+    <p>© 2025 Shrub Fund. All rights reserved.</p>
 </body>
 </html>
